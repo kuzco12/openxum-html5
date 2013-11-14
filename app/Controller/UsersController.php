@@ -107,7 +107,8 @@ class UsersController extends AppController
                 }
                 return $this->redirect($this->Auth->redirectUrl());
             } else {
-                $this->Session->setFlash(__('Login ou mot de passe invalide, réessayer'));
+                //$this->Session->setFlash(__('Login ou mot de passe invalide, réessayer'));
+                return $this->redirect(array('controller' => 'users', 'action' => 'add'));
             }
         }
     }
