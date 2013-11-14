@@ -65,7 +65,7 @@
                 <li>
                     <?php
                     if (AuthComponent::user('id') != 0) {
-                        echo $this->Html->link('Déconnexion', array('controller' => 'users', 'action' => 'logout'), array("data-icon" => "check", "class" => "ui-btn-active")) . ' ' . AuthComponent::user('username');
+                        echo $this->Html->link(__('Logout'), array('controller' => 'users', 'action' => 'logout'), array("data-icon" => "check", "class" => "ui-btn-active")) . ' ' . AuthComponent::user('username');
                     } else {
                         echo $this->Html->link('Sign in', array('controller' => 'users', 'action' => 'login'), array("data-icon" => "check",  "class" => "ui-btn-active"));
                     }
