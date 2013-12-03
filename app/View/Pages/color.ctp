@@ -4,13 +4,13 @@
         <li>
             <?php
             echo $this->Html->link($this->Html->image('black.png') . '<h2>' . __('Black') . '</h2>',
-                array('controller' => 'pages', 'action' => 'display', 'wait_opponent', 'color' => 'black'),
+                array('controller' => 'pages', 'action' => 'display', 'wait_opponent', 'game' => $this->params['named']['game'], 'color' => 'black'),
                 array('escape' => false));
             ?>
         <li>
             <?php
             echo $this->Html->link($this->Html->image('white.png') . '<h2>' . __('White') . '</h2>',
-                array('controller' => 'pages', 'action' => 'display', 'wait_opponent', 'color' => 'white'),
+                array('controller' => 'pages', 'action' => 'display', 'wait_opponent', 'game' => $this->params['named']['game'], 'color' => 'white'),
                 array('escape' => false));
             ?>
     </ul>
