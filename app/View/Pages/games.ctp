@@ -1,6 +1,6 @@
 <div data-role="content">
     <ul data-role="listview" data-inset="true" class="data-split-icon"
-        style="width: 30%; margin-left:auto; margin-right:auto; align:center; text-align:center;">
+        style="width: 90%; margin-left:auto; margin-right:auto; align:center; text-align:center;">
         <li>
             <?php
             echo $this->Html->link($this->Html->image('dvonn.jpg').'<h2>Dvonn</h2>',
@@ -26,10 +26,11 @@
                 array('escape' => false));
             ?>
 
+
         <li>
             <?php
             echo $this->Html->link($this->Html->image('yinsh.jpg').'<h2>Yinsh</h2>',
-                array('controller' => 'pages', 'action' => 'display', 'mode_choice'),
+                array('controller' => 'pages', 'action' => 'display', 'color'),
                 array('escape' => false));
             ?>
         <li>

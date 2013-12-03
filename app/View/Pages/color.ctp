@@ -3,17 +3,16 @@
         style="width: 90%; margin-left:auto; margin-right:auto; align:center; text-align:center;">
         <li>
             <?php
-            echo $this->Html->link($this->Html->image('yinsh.jpg') . '<h2>Regular</h2>',
-                array('controller' => 'pages', 'action' => 'display', 'yinsh_regular'),
+            echo $this->Html->link($this->Html->image('black.png') . '<h2>' . __('Black') . '</h2>',
+                array('controller' => 'pages', 'action' => 'display', 'wait_opponent', 'color' => 'black'),
                 array('escape' => false));
             ?>
         <li>
             <?php
-            echo $this->Html->link($this->Html->image('yinsh.jpg') . '<h2>Blitz</h2>',
-                array('controller' => 'pages', 'action' => 'display', 'yinsh'),
+            echo $this->Html->link($this->Html->image('white.png') . '<h2>' . __('White') . '</h2>',
+                array('controller' => 'pages', 'action' => 'display', 'wait_opponent', 'color' => 'white'),
                 array('escape' => false));
             ?>
-
     </ul>
 </div>
 
