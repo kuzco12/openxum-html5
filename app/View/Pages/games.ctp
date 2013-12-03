@@ -3,39 +3,38 @@
         style="width: 90%; margin-left:auto; margin-right:auto; align:center; text-align:center;">
         <li>
             <?php
-            echo $this->Html->link($this->Html->image('dvonn.jpg').'<h2>Dvonn</h2>',
+            echo $this->Html->link($this->Html->image('dvonn.jpg') . '<h2>Dvonn</h2>',
                 array('controller' => 'pages', 'action' => 'display', 'dvonn'),
                 array('escape' => false));
             ?>
         <li>
             <?php
-            echo $this->Html->link($this->Html->image('invers.jpg').'<h2>Invers</h2>',
+            echo $this->Html->link($this->Html->image('invers.jpg') . '<h2>Invers</h2>',
                 array('controller' => 'pages', 'action' => 'display', 'invers'),
                 array('escape' => false));
             ?>
         <li>
             <?php
-            echo $this->Html->link($this->Html->image('gipf.jpg').'<h2>Gipf</h2>',
+            echo $this->Html->link($this->Html->image('gipf.jpg') . '<h2>Gipf</h2>',
                 array('controller' => 'pages', 'action' => 'display', 'gipf'),
                 array('escape' => false));
             ?>
         <li>
             <?php
-            echo $this->Html->link($this->Html->image('tzaar.jpg').'<h2>Tzaar</h2>',
+            echo $this->Html->link($this->Html->image('tzaar.jpg') . '<h2>Tzaar</h2>',
                 array('controller' => 'pages', 'action' => 'display', 'tzaar'),
                 array('escape' => false));
             ?>
 
-
         <li>
             <?php
-            echo $this->Html->link($this->Html->image('yinsh.jpg').'<h2>Yinsh</h2>',
+            echo $this->Html->link($this->Html->image('yinsh.jpg') . '<h2>Yinsh</h2>',
                 array('controller' => 'pages', 'action' => 'display', 'color', 'game' => 'yinsh'),
                 array('escape' => false));
             ?>
         <li>
             <?php
-            echo $this->Html->link($this->Html->image('zertz.jpg').'<h2>Zertz</h2>',
+            echo $this->Html->link($this->Html->image('zertz.jpg') . '<h2>Zertz</h2>',
                 array('controller' => 'pages', 'action' => 'display', 'zertz'),
                 array('escape' => false));
             ?>

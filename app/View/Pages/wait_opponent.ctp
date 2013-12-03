@@ -8,7 +8,8 @@
         echo '<br /><br />' . __('Waiting for an opponent ...');
 
 
-        echo '<br /><br />' . $this->Html->link('Test', array('controller' => 'pages', 'action' => 'display', 'mode_choice', 'game' => $this->params['named']['game']));
+        echo '<br /><br />' . $this->Html->link('Test',
+                array('controller' => 'pages', 'action' => 'display', 'mode_choice', 'game' => $this->params['named']['game'], 'color' => $this->params['named']['color']));
         ?>
 
     </ul>

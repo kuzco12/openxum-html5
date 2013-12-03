@@ -4,13 +4,13 @@
         <li>
             <?php
             echo $this->Html->link($this->Html->image('yinsh.jpg') . '<h2>Regular</h2>',
-                array('controller' => 'pages', 'action' => 'display', $this->params['named']['game'], 'mode' => 'regular'),
+                array('controller' => 'pages', 'action' => 'display', $this->params['named']['game'], 'mode' => 'regular', 'color' => $this->params['named']['color']),
                 array('escape' => false));
             ?>
         <li>
             <?php
             echo $this->Html->link($this->Html->image('yinsh.jpg') . '<h2>Blitz</h2>',
-                array('controller' => 'pages', 'action' => 'display', $this->params['named']['game'], 'mode' => 'blitz'),
+                array('controller' => 'pages', 'action' => 'display', $this->params['named']['game'], 'mode' => 'blitz', 'color' => $this->params['named']['color']),
                 array('escape' => false));
             ?>
 

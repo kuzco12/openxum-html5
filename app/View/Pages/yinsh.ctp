@@ -18,9 +18,10 @@
             var canvas_div = document.getElementById("boardDiv");
             var markerNumber = document.getElementById("markerNumber");
             var turnList = document.getElementById("turnList");
-            var engine = new Yinsh.Engine(<?php echo ($this->params['named']['mode'] == 'regular') ? 'Yinsh.GameType.REGULAR' : 'Yinsh.GameType.BLITZ'; ?>, Yinsh.Color.BLACK);
-            var gui = new Yinsh.GuiPlayer(Yinsh.Color.BLACK, engine);
-            var other = new Yinsh.RandomPlayer(Yinsh.Color.WHITE, engine);
+            var engine = new Yinsh.Engine(<?php echo ($this->params['named']['mode'] == 'regular') ? 'Yinsh.GameType.REGULAR' : 'Yinsh.GameType.BLITZ'; ?>,
+                <?php echo ($this->params['named']['color'] == 'black') ? 'Yinsh.Color.BLACK' : 'Yinsh.Color.WHITE'; ?>);
+            var gui = new Yinsh.GuiPlayer(<?php echo ($this->params['named']['color'] == 'black') ? 'Yinsh.Color.BLACK' : 'Yinsh.Color.WHITE'; ?>, engine);
+            var other = new Yinsh.RandomPlayer(<?php echo ($this->params['named']['color'] == 'black') ? 'Yinsh.Color.WHITE' : 'Yinsh.Color.BLACK'; ?>, engine);
             var manager = new Yinsh.Manager(engine, gui, other, new Yinsh.Status(markerNumber, turnList));
 
             if (canvas_div.clientHeight < canvas_div.clientWidth) {
