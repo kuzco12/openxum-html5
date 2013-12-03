@@ -6,6 +6,9 @@
         echo $this->Html->image(($this->params['named']['color'] == 'black') ? 'black.png' : 'white.png',
             array('width' => '128px', 'height' => '128px', 'margin' => 'auto'));
         echo '<br /><br />' . __('Waiting for an opponent ...');
+
+
+        echo '<br /><br />' . $this->Html->link('Test', array('controller' => 'pages', 'action' => 'display', 'mode_choice', 'game' => $this->params['named']['game']));
         ?>
 
     </ul>

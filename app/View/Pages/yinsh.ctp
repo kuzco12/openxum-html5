@@ -18,7 +18,7 @@
             var canvas_div = document.getElementById("boardDiv");
             var markerNumber = document.getElementById("markerNumber");
             var turnList = document.getElementById("turnList");
-            var engine = new Yinsh.Engine(Yinsh.GameType.BLITZ, Yinsh.Color.BLACK);
+            var engine = new Yinsh.Engine(<?php echo ($this->params['named']['mode'] == 'regular') ? 'Yinsh.GameType.REGULAR' : 'Yinsh.GameType.BLITZ'; ?>, Yinsh.Color.BLACK);
             var gui = new Yinsh.GuiPlayer(Yinsh.Color.BLACK, engine);
             var other = new Yinsh.RandomPlayer(Yinsh.Color.WHITE, engine);
             var manager = new Yinsh.Manager(engine, gui, other, new Yinsh.Status(markerNumber, turnList));
@@ -33,7 +33,7 @@
             gui.set_canvas(canvas);
             gui.set_manager(manager);
         });
-   </script>
+    </script>
 
     <div data-role="popup" id="popupWinner"></div>
 
