@@ -41,6 +41,7 @@
 
     echo $this->Html->script('jquery.min');
     echo $this->Html->script('jquery.mobile.min');
+    echo $this->Html->script('facebook-connect.js');
 
     echo $scripts_for_layout;
     ?>
