@@ -76,7 +76,7 @@ class UsersController extends AppController
                 $derniermail = $dernierCree["User"]["mail"];
 
 
-                // Options SMTP
+/*                // Options SMTP
                 $this->Email->smtpOptions = array(
                     'port'=>'587',
                     'timeout'=>'30',
@@ -104,7 +104,7 @@ class UsersController extends AppController
                 Username : '.$dernieruser.'\n
                 Password : '.$dernierpassword.'\n
                 ');
-
+*/
 
                 return $this->redirect(array('controller' => 'pages', 'action' => 'display', 'home'));
                 return $this->redirect(array('action' => 'index'));
