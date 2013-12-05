@@ -41,7 +41,6 @@
 
     echo $this->Html->script('jquery.min');
     echo $this->Html->script('jquery.mobile.min');
-    echo $this->Html->script('facebook-connect.js');
 
     echo $scripts_for_layout;
     ?>
@@ -65,10 +64,10 @@
                 <li><a href="#" data-icon="info">Help</a></li>
                 <li>
                     <?php
-                    if (AuthComponent::user('id') != 0) {
-                        echo $this->Html->link(__('Logout'), array('controller' => 'users', 'action' => 'logout'), array("data-icon" => "check", "class" => "ui-btn-active")) . ' ' . AuthComponent::user('username');
+                    if (AuthComponent::user('user_id') != 0) {
+                        echo $this->Html->link('Logout ['.AuthComponent::user('username').']', array('controller' => 'users', 'action' => 'logout'), array("data-icon" => "check",  "class" => "ui-btn-active"));
                     } else {
-                        echo $this->Html->link(__('Sign In'), array('controller' => 'users', 'action' => 'login'), array("data-icon" => "check", "class" => "ui-btn-active"));
+                        echo $this->Html->link('Sign in', array('controller' => 'users', 'action' => 'login'), array("data-icon" => "check",  "class" => "ui-btn-active"));
                     }
                     ?>
                 </li>
