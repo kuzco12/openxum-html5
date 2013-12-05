@@ -9,7 +9,9 @@
 
          echo $this->Form->input('passwd', array('name'=>'passwd'));
 
-         echo $this->Form->input('mail', array('name'=>'mail'));?>
+        echo $this->Form->input('email');
+
+         ?>
 
     </fieldset>
 
@@ -29,9 +31,10 @@
                         minlength: 5,
                         equalTo: "#UserPassword"
                     },
-                    mail: {
+                    "data[User][email]": {
                         required: true,
-                        email: true
+                        email: true,
+                        equalTo: "#UserEmail"
                     }
                 },
                 messages: {
@@ -45,7 +48,7 @@
                         minlength: "Your password must be at least 5 characters long",
                         equalTo: "Please enter the same password as above"
                     },
-                    mail: "Please enter a valid email address"
+                    "data[User][email]": "Please enter a valid email address"
 
                 }
             });
