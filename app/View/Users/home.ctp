@@ -1,3 +1,6 @@
-<?php if (AuthComponent::user('role') === 'admin') { ?>
+<?php if (AuthComponent::user('role') === 'admin') {
+
+    echo "Mode Admin";
+    ?>
 
 <?php } ?>

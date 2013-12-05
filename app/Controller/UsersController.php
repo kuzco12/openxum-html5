@@ -112,7 +112,11 @@ class UsersController extends AppController
     {
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
-                if ($this->Auth->user('user_id') != 0) {
+                if (AuthComponent::user('role') === 'admin')
+                {
+                    return $this->redirect(array('controller' => 'pages', 'action' => 'display', 'home'));
+                }
+                else if ($this->Auth->user('user_id') != 0) {
                     return $this->redirect(array('controller' => 'pages', 'action' => 'display', 'games'));
                 } else {
 		    return $this->redirect($this->Auth->redirectUrl());
