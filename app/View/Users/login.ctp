@@ -9,6 +9,9 @@
     </fieldset>
 <div class="fb-root"></div>
 <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
-<?php echo $this->Form->end(__('Sign in'));?>
-
+<?php echo $this->Form->end(__('Sign in'));
+echo $this->Html->link(
+    'Create account',
+    array('controller' => 'Users', 'action' => 'add')
+);?>
 </div>
