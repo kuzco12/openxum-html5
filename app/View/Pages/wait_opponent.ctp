@@ -3,13 +3,13 @@
         style="width: 90%; margin-left:auto; margin-right:auto; padding: 5px; align:center; text-align:center;">
 
         <?php
-        echo $this->Html->image(($this->params['named']['color'] == 'black') ? 'black.png' : 'white.png',
+        echo $this->Html->image(($_POST['color'] == 'black') ? 'black.png' : 'white.png',
             array('width' => '128px', 'height' => '128px', 'margin' => 'auto'));
         echo '<br /><br />' . __('Waiting for an opponent ...');
 
 
         echo '<br /><br />' . $this->Html->link('Test',
-                array('controller' => 'pages', 'action' => 'display', 'mode_choice', 'game' => $this->params['named']['game'], 'color' => $this->params['named']['color']));
+                array('controller' => 'pages', 'action' => 'display', $_POST['game'], 'color' => $_POST['color'], 'mode' => $_POST['mode']));
         ?>
 
     </ul>

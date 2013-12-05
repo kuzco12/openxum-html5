@@ -29,7 +29,7 @@
         <li>
             <?php
             echo $this->Html->link($this->Html->image('yinsh.jpg') . '<h2>Yinsh</h2>',
-                array('controller' => 'pages', 'action' => 'display', 'color', 'game' => 'yinsh'),
+                array('controller' => 'pages', 'action' => 'display', 'choice', 'game' => 'yinsh'),
                 array('escape' => false));
             ?>
         <li>
