@@ -9,7 +9,7 @@
 
 
         echo '<br /><br />' . $this->Html->link('Test',
-                array('controller' => 'pages', 'action' => 'display', 'mode_choice', 'game' => $this->params['named']['game'], 'color' => $this->params['named']['color']));
+                array('controller' => 'pages', 'action' => 'display', $this->params['named']['game'], 'color' => $this->params['named']['color']));
         ?>
 
     </ul>
