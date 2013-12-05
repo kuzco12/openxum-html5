@@ -62,6 +62,7 @@ class UsersController extends AppController
 	    $this->User->create();
 	    $this->request->data["User"]["user_id"] = $last_user_id + 1;
             $this->request->data["User"]["role"] = 'player';
+
             if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash(__('L\'utilisateur a été sauvegardé'));
 
