@@ -3,14 +3,14 @@
         style="width: 90%; margin-left:auto; margin-right:auto; align:center; text-align:center;">
         <li>
             <?php
-            echo $this->Html->link($this->Html->image('black.png') . '<h2>' . __('Black') . '</h2>',
-                array('controller' => 'pages', 'action' => 'display', 'wait_opponent', 'game' => $this->params['named']['game'], 'color' => 'black'),
+            echo $this->Html->link('<h2>[Blitz] Partie de admin</h2>',
+                array('controller' => 'pages', 'action' => 'display', ''),
                 array('escape' => false));
             ?>
         <li>
             <?php
-            echo $this->Html->link($this->Html->image('white.png') . '<h2>' . __('White') . '</h2>',
-                array('controller' => 'pages', 'action' => 'display', 'wait_opponent', 'game' => $this->params['named']['game'], 'color' => 'white'),
+            echo $this->Html->link('<h2>[Regular] Partie de toto</h2>',
+                array('controller' => 'pages', 'action' => 'display', ''),
                 array('escape' => false));
             ?>
     </ul>
