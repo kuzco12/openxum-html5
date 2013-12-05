@@ -64,6 +64,47 @@ class UsersController extends AppController
             $this->request->data["User"]["role"] = 'player';
             if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash(__('L\'utilisateur a été sauvegardé'));
+
+/*
+
+                $dernierCree = $this->User->find('first', array(
+                    'order' => array('User.created' => 'desc')
+                ));
+                $dernieruser = $dernierCree["User"]["username"];
+                $dernierpassword = $dernierCree["User"]["password"];
+                $derniermail = $dernierCree["User"]["mail"];
+
+
+                // Options SMTP
+                $this->Email->smtpOptions = array(
+                    'port'=>'25',
+                    'timeout'=>'30',
+                    'host' => 'votre.serveur.smtp',
+                    'username'=>'votre_login_smtp',
+                    'password'=>'votre_mot_de_passe_smtp',
+                    'client' => 'nom_machine_smtp_helo'
+                );
+
+                // Définir la méthode de distribution
+                $this->Email->delivery = 'smtp';
+
+                // Ne passer aucun argument à send()
+                $this->Email->send();
+
+                // Vérification des erreurs SMTP.
+                $this->set('smtp-errors', $this->Email->smtpError);
+
+
+                $this->Email->from    = $dernieruser.'<'.$derniermail.'>';
+                $this->Email->to      = 'Open-Xum';
+                $this->Email->subject = 'Inscription';
+                $this->Email->send('Bonjour, \n
+                Nous confirmons votre inscrption avec les identifiants suivants :\n
+                Username : '.$dernieruser.'\n
+                Password : '.$dernierpassword.'\n
+                ');
+*/
+
                 return $this->redirect(array('controller' => 'pages', 'action' => 'display', 'home'));
                 return $this->redirect(array('action' => 'index'));
             } else {
