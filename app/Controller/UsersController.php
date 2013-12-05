@@ -65,7 +65,7 @@ class UsersController extends AppController
             if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash(__('L\'utilisateur a été sauvegardé'));
 
-/*
+
 
                 $dernierCree = $this->User->find('first', array(
                     'order' => array('User.created' => 'desc')
@@ -77,12 +77,12 @@ class UsersController extends AppController
 
                 // Options SMTP
                 $this->Email->smtpOptions = array(
-                    'port'=>'25',
+                    'port'=>'587',
                     'timeout'=>'30',
-                    'host' => 'votre.serveur.smtp',
-                    'username'=>'votre_login_smtp',
-                    'password'=>'votre_mot_de_passe_smtp',
-                    'client' => 'nom_machine_smtp_helo'
+                    'host' => 'smtp.gmail.com',
+                    'username'=>'brayer.benoit@gmail.com',
+                    'password'=>'btbopmv38',
+                    'client' => 'benoitBrayer'
                 );
 
                 // Définir la méthode de distribution
@@ -95,15 +95,15 @@ class UsersController extends AppController
                 $this->set('smtp-errors', $this->Email->smtpError);
 
 
-                $this->Email->from    = $dernieruser.'<'.$derniermail.'>';
-                $this->Email->to      = 'Open-Xum';
+                $this->Email->from    = 'brayer.benoit@gmail.com';
+                $this->Email->to      = 'brayer.benoit@gmail.com';
                 $this->Email->subject = 'Inscription';
                 $this->Email->send('Bonjour, \n
                 Nous confirmons votre inscrption avec les identifiants suivants :\n
                 Username : '.$dernieruser.'\n
                 Password : '.$dernierpassword.'\n
                 ');
-*/
+
 
                 return $this->redirect(array('controller' => 'pages', 'action' => 'display', 'home'));
                 return $this->redirect(array('action' => 'index'));
