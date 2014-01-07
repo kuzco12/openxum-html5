@@ -58,7 +58,13 @@
                 </li>
                 <li>
                     <?php
-                    echo $this->Html->link(__('Games'), array('controller' => 'pages', 'action' => 'display', 'games'), array("data-icon" => "grid"));
+                    if(AuthComponent::user('user_id') != 0)
+                    {
+                        echo $this->Html->link(__('Games'), array('controller' => 'pages', 'action' => 'display', 'games'), array("data-icon" => "grid"));
+                    } else {
+                        echo $this->Html->link(__('Games'), array("data-icon" => "grid"));
+                    }
+
                     ?>
                 </li>
                 <li><a href="#" data-icon="bars">Ranking</a></li>
