@@ -169,4 +169,10 @@ class UsersController extends AppController
             }
         }
     }
+
+    public function ranking()
+    {
+        $this->User->recursive = 0;
+        $this->set('users', $this->paginate());
+    }
 }
