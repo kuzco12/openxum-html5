@@ -19,7 +19,8 @@
                 ?>
             </td>
         </tr>
-    <?php endforeach; ?>
+    <?php endforeach; print_r($users);?>
+
     <?php unset($user); ?>
 
 </table>
